@@ -1,0 +1,64 @@
+<!-- 
+	<a href="viewusers.jsp">Listar Clientes</a>
+	<br />
+ -->
+ 
+ <script src="js/ddmmyyyy-validation.js"></script>
+ 
+<h1>Adicionar Cliente</h1>
+<form  name="form1" action="adduser.jsp" method="post">
+	<table style="width: 25%">
+		<tr>
+			<td>Nome:</td>
+			<td><input type="text" name="name" required="required" /> *</td>
+		</tr>
+		<tr>
+			<td>Senha:</td>
+			<td><input type="password" name="password" required="required" />
+				*</td>
+		</tr>
+		<tr>
+			<td>E-mail:</td>
+			<td><input type="email" name="email" required="required" /> *</td>
+		</tr>
+		<tr>
+			<td>Sexo:</td>
+			<td><input type="radio" name="sex" value="Masculino" />Masculino <input
+				type="radio" name="sex" value="Feminino" />Feminino</td>
+		</tr>
+
+		<tr>
+			<td>Endereço:</td>
+			<td><input type="text" name="address" required="required" /> *</td>
+		</tr>
+		<tr>
+			<td>CEP:</td>
+			<td><input type="number" name="cep" required="required"
+				onkeypress="return event.charCode>=48 && event.charCode<=57" /> *</td>
+		</tr>
+		<tr>
+			<td>Telefone:</td>
+			<td><input type="number" name="phone" required="required"
+				onkeypress="return event.charCode>=48 && event.charCode<=57" /> *</td>
+		</tr>
+		<tr>
+			<td>CPF:</td>
+			<td><input type="number" name="cpf" required="required"
+				onkeypress="return event.charCode>=48 && event.charCode<=57" /> *</td>
+		</tr>
+		<tr>
+			<td>Nascimento:</td>
+			<td><input type="date" name="birthdate" placeholder="DD/MM/YYYY"
+				required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" title="MM/DD/AAAA" 
+				onchange="validatedate(document.form1.birthdate)"
+				/>
+				*</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+							<input class="button" type="submit" value="Adicionar"/>
+							<a class="button button2" href="index.jsp">Sair</a>
+			</td>
+		</tr>
+	</table>
+</form>
